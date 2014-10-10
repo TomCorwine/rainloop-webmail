@@ -122,6 +122,15 @@
 			}
 		}, this.messageVisibility);
 
+		this.unsubscribeCommand = Utils.createCommand(this, function () {
+			if (this.message())
+			{
+				//require('App/App').deleteMessagesFromFolder(Enums.FolderType.Spam,
+					//this.message().folderFullNameRaw,
+					//[this.message().uid], true);
+			}
+		}, this.messageVisibility);
+
 		this.spamCommand = Utils.createCommand(this, function () {
 			if (this.message())
 			{

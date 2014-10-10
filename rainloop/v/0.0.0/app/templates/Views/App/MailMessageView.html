@@ -68,6 +68,15 @@
 								<span class="i18n" data-i18n-text="MESSAGE/BUTTON_ARCHIVE"></span>
 							</a>
 						</li>
+
+						<li class="e-item" role="presentation" data-bind="visible: usePreviewPane() && !isDraftFolder() && !isSentFolder() && !isSpamFolder() && !isSpamDisabled()">
+							<a target="_blank" class="e-link menuitem" href="#" tabindex="-1" data-bind="command: unsubscribeCommand">
+								<i class=""></i>
+								&nbsp;&nbsp;
+								<span class="i18n" data-i18n-text="MESSAGE/BUTTON_UNSUBSCRIBE"></span>
+							</a>
+						</li>
+
 						<li class="e-item" role="presentation" data-bind="visible: usePreviewPane() && !isDraftFolder() && !isSentFolder() && !isSpamFolder() && !isSpamDisabled()">
 							<a target="_blank" class="e-link menuitem" href="#" tabindex="-1" data-bind="command: spamCommand">
 								<i class="icon-angry-smiley"></i>
